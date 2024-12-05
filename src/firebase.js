@@ -8,13 +8,14 @@ import {
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { toast } from "react-toastify";
 
+// Mengambil konfigurasi Firebase dari environment variables
 const firebaseConfig = {
-  apiKey: "AIzaSyCn5PcYaAJZQoC1MPodkpBV_VJZxmJcrgc",
-  authDomain: "netflix-clone-2debb.firebaseapp.com",
-  projectId: "netflix-clone-2debb",
-  storageBucket: "netflix-clone-2debb.firebasestorage.app",
-  messagingSenderId: "1072047572333",
-  appId: "1:1072047572333:web:7f58ca6bcf667d54ff4664",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
